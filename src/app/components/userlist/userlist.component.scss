@@ -1,0 +1,40 @@
+table {
+    width: 100%;
+}
+
+.userlist{
+    padding: 25px;
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eef0f8;
+        h3{
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+
+    .mat-elevation-z8{
+        .search{
+            padding: 20px;
+            display: flex;
+            justify-content: end;
+
+            input{
+                width: 25%;
+                padding: 5px 10px;
+                border-radius: 3px;
+                font-size: 14px;
+        
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}

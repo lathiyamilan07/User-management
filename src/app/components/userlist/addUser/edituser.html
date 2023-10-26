@@ -1,0 +1,35 @@
+
+<form class="user-form" [formGroup]="EdituserForm" (submit)="submitForm()">
+
+    <h3>Edit User</h3>
+
+    <div class="inp-box">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input formControlName="name" matInput>
+        </mat-form-field>
+    </div>
+
+    <div class="inp-box">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput>
+        </mat-form-field>
+    </div>
+
+    <div class="inp-box">
+        <mat-form-field appearance="fill">
+            <mat-label>Select an option</mat-label>
+            <mat-select formControlName="role" [(value)]="selected">
+              <mat-option>None</mat-option>
+              <mat-option value="user">User</mat-option>
+              <mat-option value="admin">Admin</mat-option>
+              <mat-option value="others">Others</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="add-user-btn">
+        <button mat-raised-button color="primary">Submit</button>
+    </div>
+</form>
