@@ -57,6 +57,8 @@ export class UserlistComponent implements OnInit, AfterViewInit {
       let data : any = localStorage.getItem('userData')
       this.UserData = JSON.parse(data)
       this.dataSource = new MatTableDataSource<User>(this.UserData);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     }
     else{
       localStorage.setItem('userData',JSON.stringify(this.UserData))
